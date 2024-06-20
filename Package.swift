@@ -10,20 +10,21 @@ let dependencies: [Target.Dependency] = [
 
 let package = Package(
     name: "VideoIDLiteSDK",
+    platforms: [.iOS(.v15)],
     products: [
         .library(
             name: "VideoIDLiteSDK",
             targets: ["VideoIDLiteSDK", "_VideoIDSDKStub"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/airbnb/lottie-spm.git", from: "4.1.3"),
-        .package(url: "https://github.com/krzyzanowskim/OpenSSL.git", .upToNextMinor(from: "1.1.1700")),
+        .package(url: "https://github.com/airbnb/lottie-spm.git", exact: "4.4.3"),
+        .package(url: "https://github.com/krzyzanowskim/OpenSSL.git", from: "3.1.5004"),
     ],
     targets: [
         .binaryTarget(
                     name: "VideoIDLiteSDK",
-                    url:"https://eid-librerias-ios.s3.eu-west-1.amazonaws.com/VideoID-sdk/1.8.0/VideoIDLiteSDK.xcframework.zip",
-                    checksum: "025ac1dd1b90381439a4fa79f03036c5b56e4075fab6199f9e1b7a581cc7cda8"),
+                    url:"https://eid-librerias-ios.s3.eu-west-1.amazonaws.com/VideoID-sdk/1.21.0/VideoIDLiteSDK.xcframework.zip",
+                    checksum: "41afebdab745580795b35c605dc0c5a4259911ae0828f8aa6dd0083f76eb96ff"),
         .target(name: "_VideoIDSDKStub",
                dependencies: dependencies)
     ]
