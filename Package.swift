@@ -23,7 +23,7 @@ let package = Package(
         .binaryTarget(
                     name: "VideoIDLiteSDK",
                     url:"https://eid-librerias-ios.s3.eu-west-1.amazonaws.com/VideoID-sdk/1.8.0/VideoIDLiteSDK.xcframework.zip",
-                    checksum: "025ac1dd1b90381439a4fa79f03036c5b56e4075fab6199f9e1b7a581cc7cda8"),
+                    checksum: "c1f92be58cdedc707703a7cf3285cd0a6cc19ee73bfa6cd68e2ee8e6c7538b05"),
         .target(name: "_VideoIDSDKStub",
                dependencies: dependencies)
     ]
