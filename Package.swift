@@ -3,9 +3,9 @@
 
 import PackageDescription
 
-let version: String = "26.38.0-RC"
-let urlVersion: String = "26.38.0"
-let checksum: String = "a2db2402f1e0342926532c92a4db3a49f17874079afee965005f43535ebe9cfa"
+let version: String = "26.40.2-RC"
+let urlVersion: String = "26.40.2"
+let checksum: String = "c1e00170c07ba4bea1e7ec2816efa14af84649bae0f11af20ff0111a6c204642"
 let catnipVersion = Version(0, 0, 10)
 
 let dependencies: [Target.Dependency] = [
@@ -26,7 +26,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/signicat/catnip-spm.git", exact: catnipVersion),
-        .package(url: "https://github.com/airbnb/lottie-spm.git", exact: "4.4.3"),
+        .package(url: "https://github.com/airbnb/lottie-spm.git", exact: "4.5.2"),
         .package(url: "https://github.com/krzyzanowskim/OpenSSL.git", from: "3.2.2000"),
     ],
     targets: [
