@@ -3,15 +3,14 @@
 
 import PackageDescription
 
-let version: String = "26.40.1-RC"
-let urlVersion: String = "26.40.1"
-let checksum: String = "d2ddfa2633b7faeb658a9377a3492924929ade4f03e898829d978feea7cf1b27"
-let catnipVersion = Version(0, 0, 10)
+let version: String = "26.42.1-RC"
+let urlVersion: String = "26.42.1"
+let checksum: String = "1272f44175004334f5bfef017d01799d7226f90b113160ac077120ee25911efc"
+let catnipVersion = Version(0, 0, 11)
 
 let dependencies: [Target.Dependency] = [
     .product(name: "Catnip", package: "catnip-spm"),
     .product(name: "Lottie", package: "lottie-spm"),
-    .product(name: "OpenSSL", package: "OpenSSL"),
 ]
 
 let package = Package(
@@ -27,7 +26,6 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/signicat/catnip-spm.git", exact: catnipVersion),
         .package(url: "https://github.com/airbnb/lottie-spm.git", exact: "4.5.2"),
-        .package(url: "https://github.com/krzyzanowskim/OpenSSL.git", from: "3.2.2000"),
     ],
     targets: [
         .binaryTarget(
